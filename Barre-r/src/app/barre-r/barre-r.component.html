@@ -1,0 +1,12 @@
+<html>
+
+<div class="container">
+    <input #searchInput (wait)="wait()" (suggest)="suggest()" type="text" class="form-control"
+        placeholder="Rechercher un pays..." />
+
+    <div *ngFor="let pays of currentPaysListe" (click)="selectPays(pays)" class="suggestion">
+        {{ pays.nom }}
+    </div>
+</div>
+
+</html>
